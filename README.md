@@ -1,6 +1,6 @@
 # rw_fooderlich
 
-Following the Ray Wenderlich Flutter Apprentice Book course implementation of a Recipies App (Chapters 3 and 4)
+Following the Ray Wenderlich Flutter Apprentice Book course implementation of the Fooderlich App (Chapters 3, 4 and 5)
 
 https://www.raywenderlich.com/books/flutter-apprentice/v2.0
 
@@ -20,3 +20,6 @@ Chapter 4 Key Points
 - The Flutter Inspector is a useful tool to debug, experiment with and inspect a widget tree.
 - You should always start by creating StatelessWidgets and only use StatefulWidgets when you need to manage and maintain the state of your widget.
 - Inherited widgets are a good solution to access state from the top of the tree.
+
+Chapter 5 Key Points
+- 
