@@ -1,6 +1,6 @@
 # rw_recipies
 
-Following the Ray Wenderlich Flutter Apprentice Book course implementation of a Recipies App (Chapters 3 and ...)
+Following the Ray Wenderlich Flutter Apprentice Book course implementation of a Recipies App (Chapters 3 and 4)
 
 https://www.raywenderlich.com/books/flutter-apprentice/v2.0
 
@@ -13,3 +13,10 @@ Chapter 3 Key Points
 - The Container widget can be used to group other widgets together.
 - The Stack widget layers child widgets on top of each other.
 - The Flutter team created a Widget UI component library that shows how each widget works! Check it out here: https://gallery.flutter.dev/
+
+Chapter 4 Key Points
+- Flutter maintains three trees in parallel: the Widget, Element and RenderObject trees.
+- A Flutter app is performant because it maintains its structure and only updates the widgets that need redrawing.
+- The Flutter Inspector is a useful tool to debug, experiment with and inspect a widget tree.
+- You should always start by creating StatelessWidgets and only use StatefulWidgets when you need to manage and maintain the state of your widget.
+- Inherited widgets are a good solution to access state from the top of the tree.
