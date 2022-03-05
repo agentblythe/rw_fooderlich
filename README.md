@@ -1,4 +1,4 @@
-# rw_recipies
+# rw_fooderlich
 
 Following the Ray Wenderlich Flutter Apprentice Book course implementation of a Recipies App (Chapters 3 and 4)
 
