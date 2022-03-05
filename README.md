@@ -12,3 +12,4 @@ Chapter 3 Key Points
 - The Scaffold widget implements all your basic visual layout structure needs.
 - The Container widget can be used to group other widgets together.
 - The Stack widget layers child widgets on top of each other.
+- The Flutter team created a Widget UI component library that shows how each widget works! Check it out here: https://gallery.flutter.dev/
