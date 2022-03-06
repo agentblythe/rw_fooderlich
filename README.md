@@ -1,6 +1,6 @@
 # rw_fooderlich
 
-Following the Ray Wenderlich Flutter Apprentice Book course implementation of the Fooderlich App (Chapters 3 and 4)
+Following the Ray Wenderlich Flutter Apprentice Book course implementation of the Fooderlich App (Chapters 3, 4, 5)
 
 https://www.raywenderlich.com/books/flutter-apprentice/v2.0
 
