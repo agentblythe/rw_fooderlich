@@ -20,6 +20,3 @@ Chapter 4 Key Points
 - The Flutter Inspector is a useful tool to debug, experiment with and inspect a widget tree.
 - You should always start by creating StatelessWidgets and only use StatefulWidgets when you need to manage and maintain the state of your widget.
 - Inherited widgets are a good solution to access state from the top of the tree.
-
-Chapter 5 Key Points
-- 
