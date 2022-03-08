@@ -4,15 +4,20 @@ import '../components/components.dart';
 import '../models/models.dart';
 import '../api/mock_fooderlich_service.dart';
 
-class ExploreScreen extends StatelessWidget {
+class ExploreScreen extends StatefulWidget {
   ExploreScreen({Key? key}) : super(key: key);
 
   final mockService = MockFooderlichService();
 
   @override
+  State<ExploreScreen> createState() => _ExploreScreenState();
+}
+
+class _ExploreScreenState extends State<ExploreScreen> {
+  @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: mockService.getExploreData(),
+      future: widget.mockService.getExploreData(),
       builder: (context, AsyncSnapshot<ExploreData> snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           return ListView(
