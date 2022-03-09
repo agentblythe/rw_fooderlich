@@ -20,3 +20,13 @@ Chapter 4 Key Points
 - The Flutter Inspector is a useful tool to debug, experiment with and inspect a widget tree.
 - You should always start by creating StatelessWidgets and only use StatefulWidgets when you need to manage and maintain the state of your widget.
 - Inherited widgets are a good solution to access state from the top of the tree.
+
+Chapter 5 Key Points
+- ListView and GridView support both horizontal and vertical scroll directions.
+- The primary property lets Flutter know which scroll view is the primary scroll view.
+- Physics in a scroll view lets you change the user scroll interaction.
+- Especially in a nested list view, remember to set shrinkWrap to true so you can give the scroll view a fixed height for all the items in the list.
+- Use a FutureBuilder to wait for an asynchronous task to complete.
+- You can nest scrollable widgets. For example, you can place a grid view within a list view. Unleash your wildest imagination!
+- Use ScrollController and ScrollNotification to control or listen to scroll behavior.
+- Barrel files are handy to group imports together. They also let you import many widgets using a single file.
