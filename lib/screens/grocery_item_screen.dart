@@ -84,7 +84,7 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
         child: ListView(
           children: [
             buildNameField(),
-            // TODO 14: Add Importance selection
+            buildImportanceField(),
             // TODO 15: Add date picker
             // TODO 16: Add time picker
             // TODO 17: Add color picker
@@ -124,7 +124,55 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
     );
   }
 
-  // TODO: Add buildImportanceField()
+  Widget buildImportanceField() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Importance',
+          style: GoogleFonts.lato(fontSize: 28.0),
+        ),
+        Wrap(
+          spacing: 10.0,
+          children: [
+            ChoiceChip(
+              label: const Text(
+                "Low",
+                style: TextStyle(color: Colors.white),
+              ),
+              selectedColor: Colors.black,
+              selected: _importance == Importance.low,
+              onSelected: (selected) {
+                setState(() => _importance = Importance.low);
+              },
+            ),
+            ChoiceChip(
+              label: const Text(
+                "Medium",
+                style: TextStyle(color: Colors.white),
+              ),
+              selectedColor: Colors.black,
+              selected: _importance == Importance.medium,
+              onSelected: (selected) {
+                setState(() => _importance = Importance.medium);
+              },
+            ),
+            ChoiceChip(
+              label: const Text(
+                "High",
+                style: TextStyle(color: Colors.white),
+              ),
+              selectedColor: Colors.black,
+              selected: _importance == Importance.high,
+              onSelected: (selected) {
+                setState(() => _importance = Importance.high);
+              },
+            ),
+          ],
+        ),
+      ],
+    );
+  }
 
   // TODO: ADD buildDateField()
 
