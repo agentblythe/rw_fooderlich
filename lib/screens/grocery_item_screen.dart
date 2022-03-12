@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 
 import '../models/models.dart';
 
@@ -83,10 +84,10 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
         padding: const EdgeInsets.all(16.0),
         child: ListView(
           children: [
-            buildNameField(),
-            buildImportanceField(),
-            // TODO 15: Add date picker
-            // TODO 16: Add time picker
+            buildNameField(context),
+            buildImportanceField(context),
+            buildDateField(context),
+            buildTimeField(context),
             // TODO 17: Add color picker
             // TODO 18: Add slider
             // TODO: 19: Add Grocery Tile
@@ -96,7 +97,7 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
     );
   }
 
-  Widget buildNameField() {
+  Widget buildNameField(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -124,7 +125,7 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
     );
   }
 
-  Widget buildImportanceField() {
+  Widget buildImportanceField(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -137,7 +138,7 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
           children: [
             ChoiceChip(
               label: const Text(
-                "Low",
+                'Low',
                 style: TextStyle(color: Colors.white),
               ),
               selectedColor: Colors.black,
@@ -148,7 +149,7 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
             ),
             ChoiceChip(
               label: const Text(
-                "Medium",
+                'Medium',
                 style: TextStyle(color: Colors.white),
               ),
               selectedColor: Colors.black,
@@ -159,7 +160,7 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
             ),
             ChoiceChip(
               label: const Text(
-                "High",
+                'High',
                 style: TextStyle(color: Colors.white),
               ),
               selectedColor: Colors.black,
@@ -174,9 +175,73 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
     );
   }
 
-  // TODO: ADD buildDateField()
+  Widget buildDateField(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Date',
+              style: GoogleFonts.lato(fontSize: 28.0),
+            ),
+            TextButton(
+              child: const Text('Select'),
+              onPressed: () async {
+                final currentDate = DateTime.now();
+                final selectedDate = await showDatePicker(
+                  context: context,
+                  initialDate: currentDate,
+                  firstDate: currentDate,
+                  lastDate: DateTime(currentDate.year + 5),
+                );
+                setState(() {
+                  if (selectedDate != null) {
+                    _dueDate = selectedDate;
+                  }
+                });
+              },
+            ),
+          ],
+        ),
+        Text(DateFormat('EEE, MMM dd, yyyy').format(_dueDate)),
+      ],
+    );
+  }
 
-  // TODO: Add buildTimeField()
+  Widget buildTimeField(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Time',
+              style: GoogleFonts.lato(fontSize: 28.0),
+            ),
+            TextButton(
+              child: const Text('Select'),
+              onPressed: () async {
+                final timeOfDay = await showTimePicker(
+                  context: context,
+                  initialTime: TimeOfDay.now(),
+                );
+
+                setState(() {
+                  if (timeOfDay != null) {
+                    _timeOfDay = timeOfDay;
+                  }
+                });
+              },
+            ),
+          ],
+        ),
+        Text(_timeOfDay.format(context)),
+      ],
+    );
+  }
 
   // TODO: Add buildColorPicker()
 
