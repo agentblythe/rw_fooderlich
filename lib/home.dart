@@ -31,8 +31,8 @@ class _HomeState extends State<Home> {
               style: Theme.of(context).textTheme.headline6,
             ),
           ),
-          // TODO: Replace body
-          body: pages[tabManager.selectedTab],
+          // IndexedStack preserves state of all its children
+          body: IndexedStack(index: tabManager.selectedTab, children: pages),
           bottomNavigationBar: BottomNavigationBar(
             selectedItemColor:
                 Theme.of(context).textSelectionTheme.selectionColor,
