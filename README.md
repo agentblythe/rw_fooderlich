@@ -30,3 +30,15 @@ Chapter 5 Key Points
 - You can nest scrollable widgets. For example, you can place a grid view within a list view. Unleash your wildest imagination!
 - Use ScrollController and ScrollNotification to control or listen to scroll behavior.
 - Barrel files are handy to group imports together. They also let you import many widgets using a single file.
+
+Chapter 6 Key Points
+- You can pass data around with callbacks or provider packages.
+- If you need to pass data one level up, use callbacks.
+- If you need to pass data deep in the widget tree, use providers.
+- Provider is a state management helper that acts as a wrapper around inherited widgets.
+- Provider helps expose state model objects to widgets below it.
+- Consumer listens for changes to values and rebuilds the widgets below itself.
+- Split your widgets by screen to keep code modular and organized.
+- Create manager objects to manage functions and state changes in one place.
+- Gesture widgets recognize and determine the type of touch event. They provide callbacks to react to events like onTap or onDrag.
+- You can use dismissible widgets to swipe away items in a list.
