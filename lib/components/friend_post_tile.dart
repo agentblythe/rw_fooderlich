@@ -4,12 +4,12 @@ import '../components/components.dart';
 import '../models/models.dart';
 
 class FriendPostTile extends StatelessWidget {
+  final Post post;
+
   const FriendPostTile({
     Key? key,
     required this.post,
   }) : super(key: key);
-
-  final Post post;
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +18,7 @@ class FriendPostTile extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         CircleImage(
-          imageProvider: AssetImage(
-            post.profileImageUrl,
-          ),
+          imageProvider: AssetImage('${post.profileImageUrl}'),
           imageRadius: 20,
         ),
         const SizedBox(width: 16),
@@ -31,8 +29,8 @@ class FriendPostTile extends StatelessWidget {
               Text(post.comment),
               Text(
                 '${post.timestamp} mins ago',
-                style: const TextStyle(fontWeight: FontWeight.w700),
-              )
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
             ],
           ),
         ),
