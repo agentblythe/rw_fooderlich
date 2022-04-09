@@ -30,3 +30,6 @@
 ## Chapter 9 - Networking, Persistence and State
 See https://github.com/agentblythe/rw_recipies_2
 
+## Chapter 10 - Serialization With JSON
+See https://github.com/agentblythe/rw_recipies_2
+
