@@ -33,3 +33,6 @@ See https://github.com/agentblythe/rw_recipies_2
 ## Chapter 10 - Serialization With JSON
 See https://github.com/agentblythe/rw_recipies_2
 
+## Chapter 11 - Networking in Flutter
+See https://github.com/agentblythe/rw_recipies_2
+
